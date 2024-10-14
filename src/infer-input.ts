@@ -1,8 +1,8 @@
 export type inferInputNames<Params extends Record<string, any>> = {
   [K in keyof Params & string]: Params[K] extends Array<infer T>
     ? T extends Record<string, any>
-      ? `${K}.${number}.${inferInputNames<T>}`
-      : `${K}.${number}`
+      ? `${K}.${number}.${inferInputNames<T>}` | `${K}[${number}].${inferInputNames<T>}`
+      : `${K}.${number}` | `${K}[${number}]`
     : Params[K] extends Record<string, any>
       ? `${K}.${inferInputNames<Params[K]>}`
       : K;
