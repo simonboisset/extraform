@@ -1,5 +1,5 @@
-import {FormDataStructure, buildNestedFormData} from './build-nested-form-data';
-import {convertObjectToArrayIfNumericKeys} from './convert-object-to-array-if-numeric-keys';
+import { FormDataStructure, buildNestedFormData } from './build-nested-form-data';
+import { convertObjectToArrayIfNumericKeys } from './convert-object-to-array-if-numeric-keys';
 
 export const parseEntriesIntoStructuredData = <T = any>(entries: Record<string, string | undefined>) => {
   let structuredData: FormDataStructure<T> = {};

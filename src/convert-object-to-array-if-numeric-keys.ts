@@ -1,10 +1,10 @@
-import type {FormDataStructure} from './build-nested-form-data';
-import {parseStringToNumber} from './build-nested-form-data';
+import type { FormDataStructure } from './build-nested-form-data';
+import { parseStringToNumber } from './build-nested-form-data';
 
 export const convertObjectToArrayIfNumericKeys = <T>(data: FormDataStructure<T>) => {
   const keys = Object.keys(data) as (keyof FormDataStructure<T>)[];
   if (!Array.isArray(data) && typeof data === 'object') {
-    if (keys.every(k => parseStringToNumber(k) !== undefined)) {
+    if (keys.every((k) => parseStringToNumber(k) !== undefined)) {
       const arrayValue: FormDataStructure<T>[] = [];
       keys.map(parseStringToNumber).sort();
       for (const k of keys) {

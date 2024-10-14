@@ -15,7 +15,11 @@ export const parseStringToNumber = (value: unknown) => {
 };
 
 export const buildNestedFormData = (data: FormDataStructure<any>, key: string, value: string | undefined) => {
-  const [firstKey, ...nestedKeys] = key.split('.');
+  const [firstKey, ...nestedKeys] = key
+    .replace(/^\[|\]$/g, '')
+    .split(/\.|\[|\]\.?/)
+    .filter(Boolean);
+
   if (nestedKeys.length > 0) {
     if (!data[firstKey]) {
       data[firstKey] = {};

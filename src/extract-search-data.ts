@@ -1,4 +1,4 @@
-import {parseEntriesIntoStructuredData} from './parse-entries';
+import { parseEntriesIntoStructuredData } from './parse-entries';
 
 export const extractSearchDataFromRequest = <T = any>(request: Request) => {
   const url = new URL(request.url);

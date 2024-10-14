@@ -1,4 +1,4 @@
-import {parseEntriesIntoStructuredData} from './parse-entries';
+import { parseEntriesIntoStructuredData } from './parse-entries';
 
 export const extractFormDataFromRequest = async <T = any>(request: Request) => {
   const formData = await request.formData();
