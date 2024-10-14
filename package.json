@@ -1,0 +1,41 @@
+{
+  "name": "extraform",
+  "version": "0.5.0",
+  "description": "Make your form validation easy by naming convention",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test:watch": "vitest",
+    "test": "vitest run"
+  },
+  "repository": "https://github.com/simonboisset/extraform",
+  "bugs": {
+    "url": "https://github.com/simonboisset/extraform/issues"
+  },
+  "homepage": "https://github.com/simonboisset/extraform",
+  "author": "Simon Boisset <simon@lezo.dev>",
+  "license": "MIT",
+  "keywords": [
+    "form",
+    "validation",
+    "form-validation"
+  ],
+  "devDependencies": {
+    "prettier": "^3.3.2",
+    "tsup": "^8.2.1",
+    "typescript": "^5.5.3",
+    "vitest": "^2.0.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 120
+  },
+  "packageManager": "pnpm@9.5.0+sha256.dbdf5961c32909fb030595a9daa1dae720162e658609a8f92f2fa99835510ca5"
+}

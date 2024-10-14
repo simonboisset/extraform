@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabCompletion": "on",
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "files.eol": "\n",
+  "github.copilot.enable": {
+    "markdown": true
+  }
+}
