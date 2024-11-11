@@ -1,6 +1,6 @@
 {
   "name": "extraform",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Make your form validation easy by naming convention",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

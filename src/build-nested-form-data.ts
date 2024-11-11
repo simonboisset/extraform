@@ -14,7 +14,7 @@ export const parseStringToNumber = (value: unknown) => {
   return n;
 };
 
-export const buildNestedFormData = (data: FormDataStructure<any>, key: string, value: string | undefined) => {
+export const buildNestedFormData = (data: FormDataStructure<any>, key: string, value: string | File | undefined) => {
   const [firstKey, ...nestedKeys] = key
     .replace(/^\[|\]$/g, '')
     .split(/\.|\[|\]\.?/)
@@ -30,6 +30,7 @@ export const buildNestedFormData = (data: FormDataStructure<any>, key: string, v
     buildNestedFormData(data[firstKey] as FormDataStructure<any>, nestedKeys.join('.'), value);
   } else {
     if (!data[firstKey]) {
+      //@ts-expect-error
       data[firstKey] = value;
     }
   }
